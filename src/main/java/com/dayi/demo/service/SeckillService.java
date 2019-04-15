@@ -4,6 +4,7 @@ package com.dayi.demo.service;
 import com.dayi.demo.dto.ExposerDto;
 import com.dayi.demo.dto.SeckillDto;
 import com.dayi.demo.dto.SeckillExecutionDto;
+import com.dayi.demo.error.BusinessException;
 
 import java.util.List;
 
@@ -39,5 +40,5 @@ public interface SeckillService {
      * @param md5
      * @return
      */
-    SeckillExecutionDto excuteSeckill(Long seckillId, Long userPhone, String md5);
+    SeckillExecutionDto excuteSeckill(Long seckillId, Long userPhone, String md5) throws BusinessException;
 }

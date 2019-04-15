@@ -1,5 +1,6 @@
 package com.dayi.demo.dto;
 
+import com.dayi.demo.constant.SeckillEnum;
 import com.dayi.demo.model.SuccessKilled;
 
 /**
@@ -17,10 +18,10 @@ public class SeckillExecutionDto {
     /** 秒杀成功返回的对象 */
     private SuccessKilled successkilled;
 
-    public SeckillExecutionDto(Long seckillId, int state, String stateInfo, SuccessKilled successkilled) {
+    public SeckillExecutionDto(Long seckillId, SeckillEnum seckillEnum, SuccessKilled successkilled) {
         this.seckillId = seckillId;
-        this.state = state;
-        this.stateInfo = stateInfo;
+        this.state = seckillEnum.getState();
+        this.stateInfo = seckillEnum.getStateInfo();
         this.successkilled = successkilled;
     }
 

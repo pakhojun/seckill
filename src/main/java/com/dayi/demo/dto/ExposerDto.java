@@ -19,6 +19,10 @@ public class ExposerDto {
 
     private Long end;
 
+    public ExposerDto(Boolean exposed, Long seckillId) {
+        this.exposed = exposed;
+        this.seckillId = seckillId;
+    }
 
     public ExposerDto(Boolean exposed, String md5, Long seckillId) {
         this.exposed = exposed;
@@ -26,8 +30,9 @@ public class ExposerDto {
         this.seckillId = seckillId;
     }
 
-    public ExposerDto(Boolean exposed, Long now, Long start, Long end) {
+    public ExposerDto(Boolean exposed, Long seckillId, Long now, Long start, Long end) {
         this.exposed = exposed;
+        this.seckillId = seckillId;
         this.now = now;
         this.start = start;
         this.end = end;

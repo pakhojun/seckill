@@ -1,7 +1,16 @@
 package com.dayi.demo.error;
 
 public enum BusinessEnum implements CommonError {
+    PARAMETER_ERROR(10001, "传入参数非法"),
+    SECKILL_CLOSE(20001, "秒杀关闭"),
+    REPEAT_ADD(30001, "重复插入"),
+    UNKNOW_ERROR(40001, "未知异常")
     ;
+
+    private BusinessEnum(int errorCode, String errorMsg) {
+        this.errorCode = errorCode;
+        this.errorMsg = errorMsg;
+    }
 
     private int errorCode;
 
